@@ -8,7 +8,6 @@ public class MissionaryCannibalNode extends DFSAndIDS {
     /**
      * The following are the only instance variables you should need.(some others might be inherited from
      * UUSearchProblem, but worry about that later.)
-     * <p>
      * TODO what is goalm here? Write comments here
      */
     private int goalm;
