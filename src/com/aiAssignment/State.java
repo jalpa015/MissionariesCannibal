@@ -13,8 +13,8 @@ public class State {
 
     private State parentState;
 
-    public State(int cannibalLeft, int missionaryLeft, Position boat,
-                 int cannibalRight, int missionaryRight) {
+    State(int cannibalLeft, int missionaryLeft, Position boat,
+          int cannibalRight, int missionaryRight) {
         this.cannibalLeft = cannibalLeft;
         this.missionaryLeft = missionaryLeft;
         this.boat = boat;
@@ -22,17 +22,17 @@ public class State {
         this.missionaryRight = missionaryRight;
     }
 
-    public boolean isGoal() {
+    boolean isGoal() {
         return cannibalLeft == 0 && missionaryLeft == 0;
     }
 
-    public boolean isValid() {
+    private boolean isValid() {
         return missionaryLeft >= 0 && missionaryRight >= 0 && cannibalLeft >= 0 && cannibalRight >= 0
                 && (missionaryLeft == 0 || missionaryLeft >= cannibalLeft)
                 && (missionaryRight == 0 || missionaryRight >= cannibalRight);
     }
 
-    public List<State> generateSuccessors() {
+    List<State> generateSuccessors() {
         List<State> successors = new ArrayList<State>();
         if (boat == Position.LEFT) {
             testAndAdd(successors, new State(cannibalLeft, missionaryLeft - 2, Position.RIGHT,
@@ -67,7 +67,7 @@ public class State {
         }
     }
 
-    public int getCannibalLeft() {
+    int getCannibalLeft() {
         return cannibalLeft;
     }
 
@@ -75,7 +75,7 @@ public class State {
         this.cannibalLeft = cannibalLeft;
     }
 
-    public int getMissionaryLeft() {
+    int getMissionaryLeft() {
         return missionaryLeft;
     }
 
@@ -115,15 +115,15 @@ public class State {
         return boat == Position.RIGHT;
     }
 
-    public State getParentState() {
+    State getParentState() {
         return parentState;
     }
 
-    public void setParentState(State parentState) {
+    private void setParentState(State parentState) {
         this.parentState = parentState;
     }
 
-    public Position getBoat() {
+    Position getBoat() {
         return boat;
     }
 

@@ -1,11 +1,7 @@
-# Missionaries Cannibal Problem Implementation
+# Implementation of AI Search Techniques to solve the Missionaries and Cannibal Problem
 
-### What is "Missionaries Cannibal Problem Implementation"
-- TODO
 
-### Implementation of "Missionaries Cannibal Problem Implementation"
-
-Missionaries and Cannibals problem has been implemented by the following Search Strategies:
+The following AI Search techniques have been used to solve the famous Missionaries and Cannibals problem:
 
   a. *Breadth First Search*
   
@@ -13,8 +9,8 @@ Missionaries and Cannibals problem has been implemented by the following Search 
   
   c. *Iterative Deepening Search*
     
-This project aims to solve the problem by comparing the Search Strategies.
+The comparison is made by comparing the time taken to execute the program, also by the nodes that has been expanded to reach the goal state.
 
 ### Installation Guide
-- TODO
+- To run this project, install the project, build and run the Main.java file
  

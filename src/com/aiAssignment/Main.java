@@ -42,6 +42,17 @@ public class Main {
         endTime = System.nanoTime();
         duration = (endTime - startTime)/1000000 ;
         System.out.println("Elapsed time in Iterative deepening: "+duration+"ms");
+        System.out.println();
+        System.out.println();
+
+        // Adding A* algorithm
+        System.out.println("A* Search:");
+        startTime = System.nanoTime();
+        AStar graph = new AStar();
+        graph.astarSearch(3, 3, 1);
+        endTime = System.nanoTime();
+        duration = (endTime - startTime)/1000000 ;
+        System.out.println("Elapsed time in A* Search "+duration+"ms");
     }
     private static void printSolution(State solution) {
         if (null == solution) {
